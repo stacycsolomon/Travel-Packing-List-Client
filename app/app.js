@@ -1,4 +1,5 @@
 const authEvents = require('./auth/events')
+const tripEvents = require('./trip/events')
 
 $(() => {
   $('#sign-up-form').on('submit', authEvents.onSignUp)
@@ -6,4 +7,9 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('#sign-out-button').on('click', authEvents.onSignOut)
   $('#sign-out-button').hide()
+  $('#trips').on('click', tripEvents.onIndexTrips)
+  $('#find-trip').on('submit', tripEvents.onFindTrip)
+  $('#add-trip').on('submit', tripEvents.onAddTrip)
+  $('#trips-display').on('click', '.delete-trip', tripEvents.onDeleteTrip)
+  $('#trips-display').on('submit', '.update-trip', tripEvents.onUpdateTrip)
 })
