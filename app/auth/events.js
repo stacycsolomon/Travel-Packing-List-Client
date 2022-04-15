@@ -5,6 +5,7 @@ const authUi = require('./ui.js')
 const authApi = require('./api.js')
 
 const onCreateAccount = function () {
+  $('#auth-display').text('')
   $('#sign-up').show()
   $('#sign-in-btn').show()
   $('#create-account').hide()
