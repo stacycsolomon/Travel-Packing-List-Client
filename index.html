@@ -23,7 +23,7 @@
     <div id="change-pw-modal"> 
      <button type="submit" id="sign-out-button" class="button">Sign Out</button>
       <!-- Button trigger modal -->
-      <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="submit" id="password" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Change Password
       </button>
       
@@ -42,7 +42,7 @@
                 <form id="change-password-form">
                   <input name="passwords[old]" type="password" placeholder="enter old password">
                   <input name="passwords[new]" type="password" placeholder="enter new password">
-                  <button type="submit" class="button">Change Password</button>
+                  <button type="submit" class="button">Submit</button>
   
                 </form>
               </div><br>
@@ -72,30 +72,24 @@
 </div>
 
 <button id="create-account">Create New Account</button>
-<button id="sign-in-btn">Sign In</button><br>
+<button id="sign-in-btn">Already a User</button><br>
 
      <section id="auth-display"></section><br>
+     <p id="error-message"></p>
+     <section id="display"></section><br>
    
 <div id="trip-details"> 
   <h2>Trip Details</h2><br>
 
-    <p id="error-message"></p>
-    <section id="display"></section><br>
       
-    <h4>All Trips</h4>
+    <h6>All Trips</h6>
     <button id="trips">Show Trips</button><br>
-    <br>
-    <h4>Find Trip</h4>
-    <form id="find-trip">
-      <input name="id" type="text" placeholder="Enter trip ID">
-      <button type="submit">Find Trip</button>
-    </form><br>
-
-    <h4>Add New Trip</h4>
+  
+    <h6>Add New Trip</h6>
     <form id="add-trip">
       <input name="trip[destination]" type="text" placeholder="Destination">
       <input name="trip[date]" type="date" placeholder="Date of Trip">
-      <input name="trip[length]" type="text" placeholder="Number of Nights">
+      <input name="trip[length]" type="number" placeholder="Number of Nights">
       <button type="submit">Add</button>
     </form><br>
 
