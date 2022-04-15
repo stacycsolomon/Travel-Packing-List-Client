@@ -14,6 +14,13 @@ h2 {
     font-size: 2em;
 }
 
+h6 {
+    text-weight: bold;
+}
+
+header {
+    margin: 50px;
+}
 body {
     background-color: rgb(20, 98, 101);
     justify-content: center;
@@ -23,9 +30,7 @@ body {
     text-align: center;
     font-family: 'Poiret One', sans-serif;
     font-weight: bold;
-    color: white
-
-
+    color: white;
 }
 
 p {
@@ -36,15 +41,40 @@ p {
 input {
     font-size: 15px;
     font-family: 'Poiret One', sans-serif;
+    text-align: center;
+    width: 150px;
+    margin: 8px auto;
+    font-family: 'Poiret One', sans-serif;
 }
 button {
     background:rgb(169, 175, 175);
     font-weight: bold;
+    margin: 8px auto;
+    width: 100px;
 }
+
 button:hover {
     transform: translateY(-2px)
 }
 
 .update-trip {
     display: none;
+}
+.edit-trip {
+    width: 100px;
+}
+.delete-trip {
+    width: 100px;
+}
+#create-account {
+    width: 250px;
+}
+#sign-in-btn {
+    width: 250px;
+}
+#password {
+    width: 150px;
+}
+#exampleModal {
+    color: black;
 }
