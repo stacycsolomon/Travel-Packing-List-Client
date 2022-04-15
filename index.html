@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Travel Packing List</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
@@ -11,7 +15,93 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+    <header>
+        <h1>Trip Planner</h1>
+    </header><br>
     <body>
-      <h1>Browser Template</h1>
-    </body>
+
+    <div id="change-pw-modal"> 
+     <button type="submit" id="sign-out-button" class="button">Sign Out</button>
+      <!-- Button trigger modal -->
+      <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Change Password
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+      
+              <div id="change-pw">
+                <form id="change-password-form">
+                  <input name="passwords[old]" type="password" placeholder="enter old password">
+                  <input name="passwords[new]" type="password" placeholder="enter new password">
+                  <button type="submit" class="button">Change Password</button>
+  
+                </form>
+              </div><br>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+
+   <div>
+    <div id="sign-up">
+      <form id="sign-up-form">
+        <input name="credentials[email]" type="email" placeholder="email@email.com">
+        <input name="credentials[password]" type="password" placeholder="enter password">
+        <input name="credentials[password_confirmation]" type="password" placeholder="enter password">
+        <button type="submit" class="button">Sign Up</button>
+      </form>
+    </div><br>
+     
+    <div id="sign-in">
+      <form id="sign-in-form">
+        <input name="credentials[email]" type="email" placeholder="email@email.com">
+        <input name="credentials[password]" type="password" placeholder="enter password">
+        <button type="submit" class="button">Sign In</button>
+      </form>
+    </div><br>
+</div>
+
+<button id="create-account">Create New Account</button>
+<button id="sign-in-btn">Sign In</button><br>
+
+     <section id="auth-display"></section><br>
+   
+<div id="trip-details"> 
+  <h2>Trip Details</h2><br>
+
+    <p id="error-message"></p>
+    <section id="display"></section><br>
+      
+    <h4>All Trips</h4>
+    <button id="trips">Show Trips</button><br>
+    <br>
+    <h4>Find Trip</h4>
+    <form id="find-trip">
+      <input name="id" type="text" placeholder="Enter trip ID">
+      <button type="submit">Find Trip</button>
+    </form><br>
+
+    <h4>Add New Trip</h4>
+    <form id="add-trip">
+      <input name="trip[destination]" type="text" placeholder="Destination">
+      <input name="trip[date]" type="date" placeholder="Date of Trip">
+      <input name="trip[length]" type="text" placeholder="Number of Nights">
+      <button type="submit">Add</button>
+    </form><br>
+
+  <section id="trips-display"></section>
+
+ </div>
+
+  </body>
 </html>
