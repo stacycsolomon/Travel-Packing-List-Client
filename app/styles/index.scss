@@ -1,1 +1,50 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+h1 {
+    font-family: 'Square Peg';
+    font-size: 4em;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Square Peg';
+    text-align: center;
+    font-size: 2em;
+}
+
+body {
+    background-color: rgb(20, 98, 101);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Poiret One', sans-serif;
+    font-weight: bold;
+    color: white
+
+
+}
+
+p {
+    font-weight: bold;
+    color: white;
+}
+
+input {
+    font-size: 15px;
+    font-family: 'Poiret One', sans-serif;
+}
+button {
+    background:rgb(169, 175, 175);
+    font-weight: bold;
+}
+button:hover {
+    transform: translateY(-2px)
+}
+
+.update-trip {
+    display: none;
+}
