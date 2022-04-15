@@ -34,6 +34,7 @@ const onAddTrip = (event) => {
   tripsApi
     .addTrip(data)
     .then((response) => tripsUi.onAddTripSuccess(response))
+    .then(onIndexTrips)
     .catch(() => tripsUi.onAddTripFailure())
 }
 
@@ -47,6 +48,7 @@ const onDeleteTrip = function (event) {
   tripsApi
     .deleteTrip(id)
     .then(() => tripsUi.onDeleteTripSuccess())
+    .then(onIndexTrips)
     .catch(() => tripsUi.onDeleteTripFailure())
 }
 
@@ -57,6 +59,7 @@ const onUpdateTrip = function (event) {
 
   // Extract the id from the update form that was submitted's data-id attribute
   const id = $(updateForm).data('id')
+  console.log(id)
 
   // create a javascript object from the form where the user entered the book
   // information
@@ -65,8 +68,16 @@ const onUpdateTrip = function (event) {
   // make API call to update one book with the data we grabbed from the form
   tripsApi
     .updateTrip(id, data)
-    .then(() => tripsUi.onUpdateTripSuccess())
+    .then(onIndexTrips)
+    .then(() => tripsUi.onUpdateTripSuccess(id))
     .catch(() => tripsUi.onUpdateTripFailure())
+}
+
+const onEditTrip = function (event) {
+  const id = $(event.target).data('id')
+  $(`#update-${id}`).show()
+  console.log('edit button works!')
+  console.log(id)
 }
 
 module.exports = {
@@ -74,5 +85,6 @@ module.exports = {
   onFindTrip,
   onAddTrip,
   onUpdateTrip,
-  onDeleteTrip
+  onDeleteTrip,
+  onEditTrip
 }
