@@ -54,7 +54,8 @@ button {
 }
 
 button:hover {
-    transform: translateY(-2px)
+    transform: translateY(-2px);
+    background-color: rgb(54, 195, 210); 
 }
 
 .update-trip {
@@ -77,4 +78,21 @@ button:hover {
 }
 #exampleModal {
     color: black;
+}
+
+#sign-out-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#password {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+#globe {
+    max-width: 50%;
+    max-height: 50%;   
 }
