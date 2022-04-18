@@ -23,6 +23,7 @@ const onIndexTripsSuccess = function (response) {
                      `
   })
   $('#trips-display').html(tripsHtml)
+  $('#auth-display').show()
   $('#auth-display').text('Showing all upcoming trips')
   $('form').trigger('reset')
   $('#error-message').text('')
@@ -43,7 +44,6 @@ const onFindTripSuccess = function (response) {
   $('#display').html(tripHtml)
   $('form').trigger('reset')
   $('#error-message').text('')
-  console.log(response)
 }
 
 const onFindTripFailure = function () {
@@ -65,7 +65,6 @@ const onAddTripSuccess = function (response) {
   $('#display').text('Success trip added').fadeOut(5000)
   $('form').trigger('reset')
   $('#error-message').text('')
-  console.log(response)
 }
 
 const onAddTripFailure = function () {
@@ -74,8 +73,6 @@ const onAddTripFailure = function () {
 }
 
 const onUpdateTripSuccess = function (id) {
-  console.log(id)
-  console.log($(`#${id}`))
   $('#display').show()
   $('#display').text('Trip successfully updated').fadeOut(5000)
   $('form').trigger('reset')

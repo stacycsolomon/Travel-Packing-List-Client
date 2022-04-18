@@ -17,7 +17,6 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (response) {
   $('#auth-display').show()
   $('#auth-display').html('<p>Start planning your trip &#128515</p>')
-  console.log(response)
   store.user = response.user
 
   $('form').trigger('reset')

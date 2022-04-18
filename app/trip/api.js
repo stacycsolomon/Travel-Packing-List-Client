@@ -35,7 +35,6 @@ const addTrip = function (data) {
 }
 
 const updateTrip = function (id, data) {
-  console.log(data)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/trips/' + id,

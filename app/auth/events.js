@@ -19,11 +19,9 @@ const onSignInAccount = function () {
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('signed up')
 
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   authApi
     .signUp(data)
@@ -33,11 +31,9 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('signed in')
 
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   authApi
     .signIn(data)
@@ -47,7 +43,7 @@ const onSignIn = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-  console.log('signed out')
+
   authApi
     .signOut()
     .then(() => authUi.onSignOutSuccess())
@@ -56,11 +52,9 @@ const onSignOut = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault()
-  console.log('password changed')
 
   const form = event.target
   const data = getFormFields(form)
-  console.log(data)
 
   authApi
     .changePassword(data)
