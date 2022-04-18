@@ -23,7 +23,7 @@ const onIndexTripsSuccess = function (response) {
                      `
   })
   $('#trips-display').html(tripsHtml)
-  $('#display').text('Showing all trips')
+  $('#auth-display').text('Showing all upcoming trips')
   $('form').trigger('reset')
   $('#error-message').text('')
 }
