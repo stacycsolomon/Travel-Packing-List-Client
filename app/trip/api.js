@@ -1,13 +1,12 @@
 'use strict'
 
 const store = require('../store')
-
-// const config = require('../config.js')
+const config = require('../config.js')
 
 const indexTrips = function () {
   return $.ajax({
     method: 'GET',
-    url: 'http://localhost:4741/trips',
+    url: config.apiUrl + '/trips',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
@@ -17,7 +16,7 @@ const indexTrips = function () {
 const findTrip = function (data) {
   return $.ajax({
     method: 'GET',
-    url: 'http://localhost:4741/trips/' + data.id,
+    url: config.apiUrl + '/trips/' + data.id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
@@ -27,7 +26,7 @@ const findTrip = function (data) {
 const addTrip = function (data) {
   return $.ajax({
     method: 'POST',
-    url: 'http://localhost:4741/trips',
+    url: config.apiUrl + '/trips',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -39,7 +38,7 @@ const updateTrip = function (id, data) {
   console.log(data)
   return $.ajax({
     method: 'PATCH',
-    url: 'http://localhost:4741/trips/' + id,
+    url: config.apiUrl + '/trips/' + id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -49,7 +48,7 @@ const updateTrip = function (id, data) {
 
 const deleteTrip = function (id) {
   return $.ajax({
-    url: 'http://localhost:4741/trips/' + id,
+    url: config.apiUrl + '/trips/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token
