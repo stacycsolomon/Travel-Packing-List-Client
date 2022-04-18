@@ -28,3 +28,10 @@ Attached I have created the wireframe for the application. So far, the applicati
 
 * Build out Version 2 and Version 3
 * Add additional CSS styling and images to the application
+
+
+### Stay Connected
+
+I am Stacy Solomon, a Full Stack Software Engineer and Web Developer. I am currently enrolled in General Assembly's full-time Software Engineering Immersive Program, with an expected graduation date of May 27th.
+
+Thank you for checking out my work! You can connect with me at stacycsolomon@gmail.com or find me on [LinkedIn](https://www.linkedin.com/in/stacycsolomon/).
