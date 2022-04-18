@@ -20,7 +20,7 @@ This application was designed for the frequent flyer, to allow travelers to stay
 
 ### Images 
 
-Attached I have created the wireframe for the application. So far, the application is in its initial state, ie, version 1. Travelers can add a new destination, include travel dates and the length of their stay. Version 2 will include a travel packing list broken down by item, quantity and description. The final version of the application will allow users to leave a trip review or comments about their trip.
+Below I have created the wireframe for this application. So far, the application is in its initial state, i.e, version 1. Travelers can add a new destination, include travel dates and the length of their stay. Version 2 will include a travel packing list broken down by item, quantity and description. The final version of the application will allow users to leave a trip review or comments about their trip.
 
 ![Wireframe](https://media.git.generalassemb.ly/user/41949/files/80a0a280-ba4a-11ec-8148-33a7f2328f12)
 
